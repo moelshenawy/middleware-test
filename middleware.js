@@ -8,9 +8,9 @@ export default function middleware(req) {
     return NextResponse.redirect("https://middleware-test-nu.vercel.app/");
   }
 
-  if (verify && url === "http://localhost:3000/") {
+  if (verify && url === "https://middleware-test-nu.vercel.app/") {
     return NextResponse.redirect(
-      "https://middleware-test-eight.vercel.app/dashboard"
+      "https://middleware-test-nu.vercel.app/dashboard"
     );
   }
 }

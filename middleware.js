@@ -5,10 +5,12 @@ export default function middleware(req) {
   let url = req.url;
 
   if (!verify && url.includes("/dashboard")) {
-    return NextResponse.redirect("http://localhost:3000/");
+    return NextResponse.redirect("https://middleware-test-eight.vercel.app/");
   }
 
   if (verify && url === "http://localhost:3000/") {
-    return NextResponse.redirect("http://localhost:3000/dashboard");
+    return NextResponse.redirect(
+      "https://middleware-test-eight.vercel.app/dashboard"
+    );
   }
 }
